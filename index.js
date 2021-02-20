@@ -1,7 +1,7 @@
 'use strict';
 
 const Zodiac = require('./server/Zodiac');
-// const News = require('./server/News');
+const News = require('./server/News');
 
 (async () => {
 
@@ -12,8 +12,9 @@ const Zodiac = require('./server/Zodiac');
     }
 
     if ("news" == args) {
-        await new News().baidu();
-        await new News().sogou();
-        await new News().weibo();
+        let news = new News();
+        await news.baidu();
+        await news.sogou();
+        await news.weibo();
     }
 })();
