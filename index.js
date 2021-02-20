@@ -11,5 +11,9 @@ const Zodiac = require('./server/Zodiac');
         await new Zodiac().fetch();
     }
 
-    // new News().weibo();
+    if ("news" == args) {
+        await new News().baidu();
+        await new News().sogou();
+        await new News().weibo();
+    }
 })();

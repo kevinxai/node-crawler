@@ -3,6 +3,7 @@
 const cheerio = require('cheerio');
 const Chrome = require('../common/Chrome');
 const Util = require('../common/Util');
+const Request = require('../common/Request');
 
 class NewsData {
 
@@ -76,8 +77,14 @@ class News {
                 }
             }
 
-            console.log("=====================================");
-            console.log(newsList);
+            for (let data of newsList) {
+                try {
+                    await Request.postWithoutBaseUrl("/api/v1/baidutop/create", data);
+                } catch (e) {
+                    console.error("Request请求失败！");
+                    console.error(e);
+                }
+            }
         });
     }
 
@@ -107,7 +114,14 @@ class News {
                 });
             }
 
-            console.log(newsList);
+            for (let data of newsList) {
+                try {
+                    await Request.postWithoutBaseUrl("/api/v1/sogoutop/create", data);
+                } catch (e) {
+                    console.error("Request请求失败！");
+                    console.error(e);
+                }
+            }
         });
     }
 
@@ -133,7 +147,14 @@ class News {
                 });
             }
 
-            console.log(newsList);
+            for (let data of newsList) {
+                try {
+                    await Request.postWithoutBaseUrl("/api/v1/weibotop/create", data);
+                } catch (e) {
+                    console.error("Request请求失败！");
+                    console.error(e);
+                }
+            }
         });
     }
 }
