@@ -4,7 +4,7 @@ name: crawler-news
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '* */9 * * *'
 
 jobs:
   crawler-news-job:
