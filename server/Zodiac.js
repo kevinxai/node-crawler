@@ -18,6 +18,14 @@ const xz = [
     '摩羯座'
 ];
 
+const toInt = function (val) {
+    try {
+        return parseInt(val.replace('%', ''))
+    } catch (e) {
+        return parseInt(Math.random() * 50 + 50)
+    }
+}
+
 class TodayFortune {
     constructor(result) {
         this.health = toInt(result.health) // 健康指数
