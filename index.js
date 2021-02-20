@@ -1,15 +1,12 @@
 'use strict';
 
-const Request = require('./common/Request');
+const Zodiac = require('./server/Zodiac');
+// const News = require('./server/News');
 
 (async () => {
     console.clear();
 
-    let key = process.env.JUHE_XZ_KEY;
+    // new News().weibo();
 
-    let url = 'http://web.juhe.cn:8080/constellation/getAll?type=tomorrow&key=' + key + '&consName=' + encodeURIComponent("水瓶座");
-
-    let res = await Request.get(url);
-
-    console.log(res);
+    await new Zodiac().fetch();
 })();

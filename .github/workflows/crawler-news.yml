@@ -52,4 +52,5 @@ jobs:
     - name: Run
       env:
         JUHE_XZ_KEY: ${{secrets.JUHE_XZ_KEY}}
+        BASE_URL: ${{secrets.BASE_URL}}
       run: npm start

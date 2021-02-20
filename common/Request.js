@@ -39,6 +39,20 @@ class Request {
                 return null
             })
     }
+
+    static async postWithoutBaseUrl(url, data) {
+        let BASE_URL = process.env.BASE_URL;
+        if (!BASE_URL) {
+            return null;
+        }
+
+        try {
+            return await Request.post(BASE_URL + url, data)
+        } catch (e) {
+            console.error(e)
+        }
+        return null
+    }
 }
 
 module.exports = Request
