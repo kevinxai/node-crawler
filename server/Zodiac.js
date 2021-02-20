@@ -51,7 +51,7 @@ class Zodiac {
         this.key = process.env.JUHE_XZ_KEY;
     }
 
-    post(res) {
+    async post(res) {
         let data = new TodayFortune(res);
         await request.postWithoutBaseUrl('/api/v1/fortune/create', data)
     }
@@ -60,7 +60,7 @@ class Zodiac {
         for (let name of xz) {
             let url = 'http://web.juhe.cn:8080/constellation/getAll?type=tomorrow&key=' + this.key + '&consName=' + encodeURIComponent(name);
             let res = await Request.get(url);
-            this.post(res);
+            await this.post(res);
         }
     }
 }
