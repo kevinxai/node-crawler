@@ -1,0 +1,28 @@
+{
+  "name": "crawler",
+  "version": "1.0.0",
+  "description": "crawler some message...",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinxai/node-crawler.git"
+  },
+  "keywords": [
+    "crawler"
+  ],
+  "author": "Kevin.Xu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinxai/node-crawler/issues"
+  },
+  "homepage": "https://github.com/kevinxai/node-crawler#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "node-fetch": "latest",
+    "puppeteer": "latest"
+  }
+}
