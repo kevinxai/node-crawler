@@ -53,7 +53,7 @@ class Zodiac {
 
     async post(res) {
         let data = new TodayFortune(res);
-        await request.postWithoutBaseUrl('/api/v1/fortune/create', data)
+        await Request.postWithoutBaseUrl('/api/v1/fortune/create', data)
     }
 
     async fetch() {
