@@ -79,7 +79,7 @@ class News {
 
             for (let data of newsList) {
                 try {
-                    await Request.postWithoutBaseUrl("/api/v1/baidutop/create", data);
+                    Request.postWithoutBaseUrl("/api/v1/baidutop/create", data);
                 } catch (e) {
                     console.error("Request请求失败！");
                     console.error(e);
@@ -116,7 +116,7 @@ class News {
 
             for (let data of newsList) {
                 try {
-                    await Request.postWithoutBaseUrl("/api/v1/sogoutop/create", data);
+                    Request.postWithoutBaseUrl("/api/v1/sogoutop/create", data);
                 } catch (e) {
                     console.error("Request请求失败！");
                     console.error(e);
@@ -149,7 +149,7 @@ class News {
 
             for (let data of newsList) {
                 try {
-                    await Request.postWithoutBaseUrl("/api/v1/weibotop/create", data);
+                    Request.postWithoutBaseUrl("/api/v1/weibotop/create", data);
                 } catch (e) {
                     console.error("Request请求失败！");
                     console.error(e);
